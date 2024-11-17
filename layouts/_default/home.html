@@ -1,7 +1,30 @@
 {{ define "main" }}
-  {{ .Content }}
-  {{ range site.RegularPages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
+<div class="container">
+  {{ $pages := where site.RegularPages "Type" "posts" }} {{ range $pages }}
+  <article class="card bg-white px-3 py-2">
+    <div class="u-flex u-items-center w-full">
+      <h2 class="title text-lg mb-0 flex-1">
+        <a href="{{ .RelPermalink }}" class="title-link">{{ .Title }}</a>
+      </h2>
+      <span class="text-gray-400 ml-auto text-sm">{{ .Date.Format "Jan 2, 2006" }}</span>
+    </div>
+
+    <p class="subtitle text-gray-600 leading-tight text-sm my-1">{{ .Summary }}</p>
+
+    <div class="u-flex u-justify-space-between">
+      {{ with .Params.tags }}
+      <div>
+        {{ range . }}
+        <div class="tag tag--xs bg-gray-500 text-white u-round-full font-thin">
+          # {{ . }}
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+
+      <a href="{{ .RelPermalink }}" class="text-gray-700 text-sm">Read all</a>
+    </div>
+  </article>
   {{ end }}
+</div>
 {{ end }}

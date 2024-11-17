@@ -1,5 +1,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+
+<!-- Cirrus UI -->
+<link href="https://cdn.jsdelivr.net/npm/cirrus-ui/dist/cirrus.min.css" rel="stylesheet">
+
+<!-- Radix Sand -->
+<link
+	rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/@radix-ui/colors@latest/sand.css"
+/>
+
+<!-- 自定义样式 -->
+{{ $style := resources.Get "scss/main.scss" | resources.ToCSS | resources.Minify }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}

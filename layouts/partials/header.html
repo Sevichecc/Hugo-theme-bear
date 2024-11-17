@@ -1,2 +1,20 @@
-<h1>{{ site.Title }}</h1>
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+<div class="container">
+  <header>
+    <div class="tile u-items-center">
+      <div class="tile__icon">
+        <figure class="avatar u-round-sm">
+          <img src="/images/avatar.jpg" alt="Profile" />
+        </figure>
+      </div>
+      <div class="tile__container u-flex u-justify-space-between u-items-flex-end">
+        <div>
+          <h1 class="tile__title m-0 text-lg">{{ site.Title }}</h1>
+          <p class="tile__subtitle text-gray-600 m-0">{{ site.Params.bio }}</p>
+        </div>
+        <div class="tile__buttons u-self-end">
+          <a href="/archives" class="u-text-gray-600 mb-0 font-normal">Archives</a>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
