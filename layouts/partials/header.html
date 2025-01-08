@@ -1,20 +1,17 @@
-<div class="container">
-  <header>
-    <div class="tile u-items-center">
-      <div class="tile__icon">
-        <figure class="avatar u-round-sm">
-          <img src="/images/avatar.jpg" alt="Profile" />
-        </figure>
-      </div>
-      <div class="tile__container u-flex u-justify-space-between u-items-flex-end">
-        <div>
-          <h1 class="tile__title m-0 text-lg">{{ site.Title }}</h1>
-          <p class="tile__subtitle text-gray-600 m-0">{{ site.Params.bio }}</p>
-        </div>
-        <div class="tile__buttons u-self-end">
-          <a href="/archives" class="u-text-gray-600 mb-0 font-normal">Archives</a>
-        </div>
-      </div>
+<header class="max-w-2xl mx-auto px-4 py-12">
+  <div class="flex items-center gap-4">
+    {{ if .Site.Params.avatar }}
+      <img src="{{ .Site.Params.avatar }}" alt="Avatar" class="w-12 h-12 rounded-lg object-cover">
+    {{ end }}
+    <div>
+      <h1 class="text-lg font-normal">
+        <a href="{{ .Site.BaseURL }}" class="text-primary hover:text-primary/80">
+          {{ .Site.Title }}
+        </a>
+      </h1>
+      {{ with .Site.Params.bio }}
+        <p class="text-sm text-secondary mt-0.5">{{ . }}</p>
+      {{ end }}
     </div>
-  </header>
-</div>
+  </div>
+</header>

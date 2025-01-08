@@ -1,30 +1,24 @@
 {{ define "main" }}
-<div class="container">
-  {{ $pages := where site.RegularPages "Type" "posts" }} {{ range $pages }}
-  <article class="card bg-white px-3 py-2">
-    <div class="u-flex u-items-center w-full">
-      <h2 class="title text-lg mb-0 flex-1">
-        <a href="{{ .RelPermalink }}" class="title-link">{{ .Title }}</a>
-      </h2>
-      <span class="text-gray-400 ml-auto text-sm">{{ .Date.Format "Jan 2, 2006" }}</span>
+<main class="max-w-2xl mx-auto px-4">
+  {{ range .Pages }}
+  <article class="post-entry">
+    <h2 class="text-xl font-normal">
+      <a href="{{ .RelPermalink }}" class="text-primary hover:text-primary/90">{{ .Title }}</a>
+    </h2>
+    <div class="mt-2 text-secondary/90 leading-relaxed">
+      {{ .Summary }}
     </div>
-
-    <p class="subtitle text-gray-600 leading-tight text-sm my-1">{{ .Summary }}</p>
-
-    <div class="u-flex u-justify-space-between">
+    <div class="mt-4 flex items-center text-sm text-secondary/80">
       {{ with .Params.tags }}
-      <div>
-        {{ range . }}
-        <div class="tag tag--xs bg-gray-500 text-white u-round-full font-thin">
-          # {{ . }}
+        <div class="flex gap-2">
+          {{ range . }}
+            <span class="post-tag">#{{ . }}</span>
+          {{ end }}
         </div>
-        {{ end }}
-      </div>
       {{ end }}
-
-      <a href="{{ .RelPermalink }}" class="text-gray-700 text-sm">Read all</a>
+      <time class="ml-auto">{{ .Date.Format "2006-01-02" }}</time>
     </div>
   </article>
   {{ end }}
-</div>
+</main>
 {{ end }}
