@@ -10,7 +10,7 @@
 
 @layer components {
   .post-entry {
-    @apply bg-white rounded-lg p-6 mb-6 shadow-sm hover:shadow-md transition-shadow;
+    @apply bg-white rounded p-6 mb-6 shadow-sm hover:shadow-md transition-shadow;
   }
   
   .post-tag {

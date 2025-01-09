@@ -1,11 +1,12 @@
 {{ define "main" }}
-<main class="max-w-2xl mx-auto px-4">
-  {{ range .Pages }}
+<main>
+  {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+  {{ range $pages }}
   <article class="post-entry">
     <h2 class="text-xl font-normal">
       <a href="{{ .RelPermalink }}" class="text-primary hover:text-primary/90">{{ .Title }}</a>
     </h2>
-    <div class="mt-2 text-secondary/90 leading-relaxed">
+    <div class="mt-3 text-secondary/90 leading-relaxed">
       {{ .Summary }}
     </div>
     <div class="mt-4 flex items-center text-sm text-secondary/80">
