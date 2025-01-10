@@ -13,17 +13,20 @@ module.exports = {
         'gray-100': '#F3F4F6',
       },
       fontFamily: {
-        sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif']
+        sans: ['Lato', 'LXGW Bright', 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif']
       },
       typography: {
         DEFAULT: {
           css: {
             color: '#374151',
             a: {
-              color: '#374151',
+              color: '#CB4C48',
               '&:hover': {
-                color: '#4B5563',
+                color: '#CB4C48',
               },
+            },
+            li: {
+              fontColor: '#374151',
             },
           },
         },

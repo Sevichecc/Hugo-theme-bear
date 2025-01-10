@@ -3,21 +3,23 @@
   {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
   {{ range $pages }}
   <article class="post-entry">
-    <h2 class="text-xl font-normal">
-      <a href="{{ .RelPermalink }}" class="text-primary hover:text-primary/90">{{ .Title }}</a>
+    <h2 class="text-xl font-medium">
+      <a href="{{ .RelPermalink }}" class="text-gray-900 hover:text-primary/80">{{ .Title }}</a>
     </h2>
-    <div class="mt-3 text-secondary/90 leading-relaxed">
+    <div class="mt-3 text-gray-500 leading-relaxed">
       {{ .Summary }}
     </div>
-    <div class="mt-4 flex items-center text-sm text-secondary/80">
+    <div class="mt-4 flex items-center ">
       {{ with .Params.tags }}
         <div class="flex gap-2">
           {{ range . }}
-            <span class="post-tag">#{{ . }}</span>
+            <small class="post-tag">
+              <span class="text-gray-500 mr-1 inline-block">#</span>{{ . }}
+            </small>
           {{ end }}
         </div>
       {{ end }}
-      <time class="ml-auto">{{ .Date.Format "2006-01-02" }}</time>
+      <time class="ml-auto text-xs text-gray-400">{{ .Date.Format "2006-01-02" }}</time>
     </div>
   </article>
   {{ end }}

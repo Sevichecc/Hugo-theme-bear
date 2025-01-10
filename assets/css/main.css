@@ -4,16 +4,16 @@
 
 @layer base {
   body {
-    @apply bg-gray-50 text-primary antialiased;
+    @apply bg-gray-50 antialiased font-sans text-gray-700;
   }
 }
 
 @layer components {
   .post-entry {
-    @apply bg-white rounded p-6 mb-6 shadow-sm hover:shadow-md transition-shadow;
+    @apply bg-white rounded p-6 mb-6 shadow-sm hover:shadow-xl transition-shadow hover:shadow-stone-200 ease-in-out duration-500;
   }
   
   .post-tag {
-    @apply text-secondary/70 hover:text-secondary;
+    @apply inline-flex items-center bg-gray-100 text-gray-600 rounded-full px-2.5 py-0.5  font-normal hover:bg-gray-200 hover:cursor-pointer;
   }
 } 

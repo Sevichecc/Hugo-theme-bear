@@ -7,4 +7,4 @@
 ## Configuration
 
 ## Links
-- https://cirrus-ui.com/
+- https://github.com/seanwcom/Red-Graphite-for-Obsidian

@@ -1,8 +1,10 @@
 <header class="flex items-center gap-4">
   {{ if .Site.Params.avatar }}
-    <img src="{{ .Site.Params.avatar }}" alt="Avatar" class="w-12 h-12 rounded object-cover">
+  <div class="p-1 bg-white rounded">
+    <img src="{{ .Site.Params.avatar }}" alt="Avatar" class="w-14 h-14 rounded-[3px] object-cover">
+  </div>
   {{ end }}
-    <div>
+    <div  class="flex justify-between flex-col h-full">
       <h1 class="text-lg font-normal">
         <a href="{{ .Site.BaseURL }}" class="text-primary hover:text-primary/80">
           {{ .Site.Title }}
