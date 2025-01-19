@@ -15,25 +15,6 @@ module.exports = {
       fontFamily: {
         sans: ['Lato', 'LXGW Bright', 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif']
       },
-      typography: {
-        DEFAULT: {
-          css: {
-            color: '#374151',
-            a: {
-              color: '#CB4C48',
-              '&:hover': {
-                color: '#CB4C48',
-              },
-            },
-            li: {
-              fontColor: '#374151',
-            },
-          },
-        },
-      },
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
 } 

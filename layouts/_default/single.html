@@ -1,21 +1,13 @@
 {{ define "main" }}
-  <article class="post-card">
+<article>
+  <header>
     <h1>{{ .Title }}</h1>
-    
-    {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-    {{ $dateHuman := .Date | time.Format "2006年1月2日" }}
-    
-    {{ .Content }}
-    
-    <div class="post-meta">
-      <time datetime="{{ $dateMachine }}">写于{{ $dateHuman }}</time>
-      {{ with .Params.tags }}
-        <div class="tags">
-          {{ range . }}
-            <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a>
-          {{ end }}
-        </div>
-      {{ end }}
+    <div>
+      {{ .Date.Format "2006-01-02" }}
     </div>
-  </article>
+  </header>
+  <div class="prose">
+    {{ .Content }}
+  </div>
+</article>
 {{ end }}
