@@ -1,40 +1,81 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=65030&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blue | My New Hugo Site</title>
 
+<link rel="preload" href="/fonts/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Lato-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/LXGWBright-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/LXGWBright-Bold.woff2" as="font" type="font/woff2" crossorigin>
 
+<link rel="stylesheet" href="/css/style.css">
 
-  
-    <link rel="stylesheet" href="/css/main.css">
-  
+<style>
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/Lato-Regular.woff') format('woff2');
+  }
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/Lato-Bold.woff') format('woff2');
+  }
+  @font-face {
+    font-family: 'LXGW Bright';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/LXGWBright-Regular.woff2') format('woff2');
+    unicode-range: U+4E00-9FFF,     
+                  U+3400-4DBF,     
+                  U+F900-FAFF,     
+                  U+3000-303F;     
+  }
+  @font-face {
+    font-family: 'LXGW Bright';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/LXGWBright-Medium.woff2') format('woff2');
+    unicode-range: U+4E00-9FFF,     
+                  U+3400-4DBF,     
+                  U+F900-FAFF,     
+                  U+3000-303F;     
+  }
 
+  @font-face {
+    font-family: 'LXGW Bright';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('/fonts/LXGWBright-Light.woff2') format('woff2');
+    unicode-range: U+4E00-9FFF,     
+                  U+3400-4DBF,     
+                  U+F900-FAFF,     
+                  U+3000-303F;     
+  }
+</style>
 
 </head>
-<body class="sand-400">
+<body class="sand-400 container mx-auto max-w-lg flex flex-col min-h-screen gap-8 pt-8">
   <header>
-    <header class="max-w-2xl mx-auto px-4 py-8">
-  <div class="flex items-center justify-between">
-    <div class="flex items-center gap-4">
+    <header class="flex items-center gap-4">
+  
+    <div  class="flex justify-between flex-col h-full">
+      <h1 class="text-lg font-normal">
+        <a href="http://localhost:65030/" class="text-primary hover:text-primary/80">
+          My New Hugo Site
+        </a>
+      </h1>
       
-      <div>
-        <h1 class="text-xl font-normal">
-          <a href="http://localhost:1313/" class="text-primary no-underline hover:text-primary/80">
-            My New Hugo Site
-          </a>
-        </h1>
-        
-      </div>
     </div>
-    
-    <nav>
-      <a href="/archives" class="text-sm text-secondary no-underline hover:text-primary">
-        归档
-      </a>
-    </nav>
-  </div>
 </header>
 
   </header>
@@ -48,8 +89,8 @@
   
 
   </main>
-  <footer>
-    <p>Copyright 2025. All rights reserved.</p>
+  <footer class="mx-auto">
+    <p class="text-sm text-secondary/80">Copyright 2025. All rights reserved.</p>
 
   </footer>
 </body>

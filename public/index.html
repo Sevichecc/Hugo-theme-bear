@@ -1,67 +1,172 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
 <head>
-	<meta name="generator" content="Hugo 0.140.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta name="generator" content="Hugo 0.140.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=65030&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My New Hugo Site</title>
 
+<link rel="preload" href="/fonts/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Lato-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/LXGWBright-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/LXGWBright-Bold.woff2" as="font" type="font/woff2" crossorigin>
 
+<link rel="stylesheet" href="/css/style.css">
 
-  
-    <link rel="stylesheet" href="/css/main.css">
-  
+<style>
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/Lato-Regular.woff') format('woff2');
+  }
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/Lato-Bold.woff') format('woff2');
+  }
+  @font-face {
+    font-family: 'LXGW Bright';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/LXGWBright-Regular.woff2') format('woff2');
+    unicode-range: U+4E00-9FFF,     
+                  U+3400-4DBF,     
+                  U+F900-FAFF,     
+                  U+3000-303F;     
+  }
+  @font-face {
+    font-family: 'LXGW Bright';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/LXGWBright-Medium.woff2') format('woff2');
+    unicode-range: U+4E00-9FFF,     
+                  U+3400-4DBF,     
+                  U+F900-FAFF,     
+                  U+3000-303F;     
+  }
 
+  @font-face {
+    font-family: 'LXGW Bright';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('/fonts/LXGWBright-Light.woff2') format('woff2');
+    unicode-range: U+4E00-9FFF,     
+                  U+3400-4DBF,     
+                  U+F900-FAFF,     
+                  U+3000-303F;     
+  }
+</style>
 
 </head>
-<body class="sand-400">
+<body class="sand-400 container mx-auto max-w-lg flex flex-col min-h-screen gap-8 pt-8">
   <header>
-    <header class="max-w-2xl mx-auto px-4 py-8">
-  <div class="flex items-center justify-between">
-    <div class="flex items-center gap-4">
+    <header class="flex items-center gap-4">
+  
+    <div  class="flex justify-between flex-col h-full">
+      <h1 class="text-lg font-normal">
+        <a href="http://localhost:65030/" class="text-primary hover:text-primary/80">
+          My New Hugo Site
+        </a>
+      </h1>
       
-      <div>
-        <h1 class="text-xl font-normal">
-          <a href="http://localhost:1313/" class="text-primary no-underline hover:text-primary/80">
-            My New Hugo Site
-          </a>
-        </h1>
-        
-      </div>
     </div>
-    
-    <nav>
-      <a href="/archives" class="text-sm text-secondary no-underline hover:text-primary">
-        归档
-      </a>
-    </nav>
-  </div>
 </header>
 
   </header>
   <main>
     
-<main class="max-w-2xl mx-auto px-4">
+<main>
+  
   
   <article class="post-entry">
-    <h2 class="post-title">
-      <a href="/posts/">Posts</a>
+    <h2 class="text-xl font-medium">
+      <a href="/posts/post-3/" class="text-gray-900 hover:text-primary/80">Post 3</a>
     </h2>
-    <div class="post-content">
-      <p>Tempor est exercitation ad qui pariatur quis adipisicing aliquip nisi ea consequat ipsum occaecat. Nostrud consequat ullamco laboris fugiat esse esse adipisicing velit laborum ipsum incididunt ut enim. Dolor pariatur nulla quis fugiat dolore excepteur. Aliquip ad quis aliqua enim do consequat.</p>
+    <div class="mt-3 text-gray-500 leading-relaxed prose">
+      <p>Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis. Proident fugiat labore eu laboris officia Lorem enim. Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi incididunt reprehenderit. Voluptate ad minim sint est aute aliquip esse occaecat tempor officia qui sunt. Aute ex ipsum id ut in est velit est laborum incididunt. Aliqua qui id do esse sunt eiusmod id deserunt eu nostrud aute sit ipsum. Deserunt esse cillum Lorem non magna adipisicing mollit amet consequat.</p>
     </div>
-    <div class="post-meta">
+    <div class="mt-4 flex items-center ">
       
-      <span class="post-date">写于2023年01月01日</span>
-      <a href="/posts/" class="read-more">全文...</a>
+        <div class="flex gap-2">
+          
+            <small class="post-tag">
+              <span class="text-gray-500 mr-1 inline-block">#</span>red
+            </small>
+          
+            <small class="post-tag">
+              <span class="text-gray-500 mr-1 inline-block">#</span>green
+            </small>
+          
+            <small class="post-tag">
+              <span class="text-gray-500 mr-1 inline-block">#</span>blue
+            </small>
+          
+        </div>
+      
+      <time class="ml-auto text-xs text-gray-400">2023-03-15</time>
+    </div>
+  </article>
+  
+  <article class="post-entry">
+    <h2 class="text-xl font-medium">
+      <a href="/posts/post-2/" class="text-gray-900 hover:text-primary/80">Post 2</a>
+    </h2>
+    <div class="mt-3 text-gray-500 leading-relaxed prose">
+      <p>Anim eiusmod irure incididunt sint cupidatat. Incididunt irure irure irure nisi ipsum do ut quis fugiat consectetur proident cupidatat incididunt cillum. Dolore voluptate occaecat qui mollit laborum ullamco et. Ipsum laboris officia anim laboris culpa eiusmod ex magna ex cupidatat anim ipsum aute. Mollit aliquip occaecat qui sunt velit ut cupidatat reprehenderit enim sunt laborum. Velit veniam in officia nulla adipisicing ut duis officia.</p>
+<p>Exercitation voluptate irure in irure tempor mollit Lorem nostrud ad officia. Velit id fugiat occaecat do tempor. Sit officia Lorem aliquip eu deserunt consectetur. Aute proident deserunt in nulla aliquip dolore ipsum Lorem ut cupidatat consectetur sit sint laborum. Esse cupidatat sit sint sunt tempor exercitation deserunt. Labore dolor duis laborum est do nisi ut veniam dolor et nostrud nostrud.</p>
+    </div>
+    <div class="mt-4 flex items-center ">
+      
+        <div class="flex gap-2">
+          
+            <small class="post-tag">
+              <span class="text-gray-500 mr-1 inline-block">#</span>red
+            </small>
+          
+            <small class="post-tag">
+              <span class="text-gray-500 mr-1 inline-block">#</span>green
+            </small>
+          
+        </div>
+      
+      <time class="ml-auto text-xs text-gray-400">2023-02-15</time>
+    </div>
+  </article>
+  
+  <article class="post-entry">
+    <h2 class="text-xl font-medium">
+      <a href="/posts/post-1/" class="text-gray-900 hover:text-primary/80">Post 1</a>
+    </h2>
+    <div class="mt-3 text-gray-500 leading-relaxed prose">
+      <p>Tempor proident minim aliquip reprehenderit dolor et ad anim Lorem duis sint eiusmod. Labore ut ea duis dolor. Incididunt consectetur proident qui occaecat incididunt do nisi Lorem. Tempor do laborum elit laboris excepteur eiusmod do. Eiusmod nisi excepteur ut amet pariatur adipisicing Lorem.</p>
+<p>Occaecat nulla excepteur dolore excepteur duis eiusmod ullamco officia anim in voluptate ea occaecat officia. Cillum sint esse velit ea officia minim fugiat. Elit ea esse id aliquip pariatur cupidatat id duis minim incididunt ea ea. Anim ut duis sunt nisi. Culpa cillum sit voluptate voluptate eiusmod dolor. Enim nisi Lorem ipsum irure est excepteur voluptate eu in enim nisi. Nostrud ipsum Lorem anim sint labore consequat do.</p>
+    </div>
+    <div class="mt-4 flex items-center ">
+      
+        <div class="flex gap-2">
+          
+            <small class="post-tag">
+              <span class="text-gray-500 mr-1 inline-block">#</span>red
+            </small>
+          
+        </div>
+      
+      <time class="ml-auto text-xs text-gray-400">2023-01-15</time>
     </div>
   </article>
   
 </main>
 
   </main>
-  <footer>
-    <p>Copyright 2025. All rights reserved.</p>
+  <footer class="mx-auto">
+    <p class="text-sm text-secondary/80">Copyright 2025. All rights reserved.</p>
 
   </footer>
 </body>

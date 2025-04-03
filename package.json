@@ -2,12 +2,12 @@
   "name": "red-bear",
   "version": "1.0.0",
   "scripts": {
-    "dev": "npx tailwindcss -i ./assets/css/main.css -o ./static/css/style.css --watch --postcss",
-    "build": "npx tailwindcss -i ./assets/css/main.css -o ./static/css/style.css --minify --postcss"
+    "dev": "npx  @tailwindcss/cli -i ./assets/css/main.css -o ./static/css/style.css --watch --postcss",
+    "build": "npx @tailwindcss/cli -i ./assets/css/main.css -o ./static/css/style.css --minify --postcss"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.17",
+    "@tailwindcss/postcss": "^4.1.1",
     "postcss": "^8.4.33",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^4.1.1"
   }
 }
