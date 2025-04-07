@@ -1,17 +1,32 @@
-<header class="flex items-center gap-4">
-  {{ if .Site.Params.avatar }}
-  <div class="p-1 bg-white rounded-sm">
-    <img src="{{ .Site.Params.avatar }}" alt="Avatar" class="w-14 h-14 rounded-[3px] object-cover">
-  </div>
-  {{ end }}
-    <div  class="flex justify-between flex-col h-full">
+<header class="flex items-start justify-between">
+  <div class="flex items-start gap-4">
+    {{ if .Site.Params.avatar }}
+    <div class="p-1 bg-white rounded">
+      <img
+        src="{{ .Site.Params.avatar }}"
+        alt="Avatar"
+        class="w-14 h-14 rounded-[3px] object-cover"
+      />
+    </div>
+    {{ end }}
+    <div class="flex justify-between flex-col">
       <h1 class="text-lg font-normal">
-        <a href="{{ .Site.BaseURL }}" class="text-primary hover:text-primary/80">
+        <a
+          href="{{ .Site.BaseURL }}"
+          class="text-primary hover:text-primary/80"
+        >
           {{ .Site.Title }}
         </a>
       </h1>
       {{ with .Site.Params.bio }}
-        <p class="text-sm text-secondary mt-0.5">{{ . }}</p>
+      <p class="text-sm text-secondary mt-0.5">{{ . }}</p>
       {{ end }}
     </div>
+  </div>
+
+  <nav class="flex items-end gap-6 whitespace-nowrap self-stretch">
+    <a href="/" class="text-sm text-stone-600 hover:text-stone-900">Blogs</a>
+    <a href="/tags" class="text-sm text-stone-600 hover:text-stone-900">Tags</a>
+    <a href="/about" class="text-sm text-stone-600 hover:text-stone-900">About</a>
+  </nav>
 </header>
